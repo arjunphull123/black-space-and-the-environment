@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background-color: black;
+  color: white;
+  text-shadow: 2px 4px 25px black;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.webgl {
+  position: absolute;
+  top: -8%;
+  left: 0;
+  z-index: 0;
+}
+
+.titleRow {
+  height: 12vh;
+  z-index: 5;
+}
+
+.subtitleRow {
+  z-index: 5;
+}
+
+.canvasRow {
+  height: 51vh;
+}
+
+.statSpacer {
+  height: 4vh;
+}
+
+.bottom-spacer {
+  height: 5vh;
+}
+
+#statsContainer {
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 0%;
+  top: 60%;
+  width: 100%;
+  padding: 50px;
+}
+
+
+#title {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+
+#subtitle {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 130%;
+  text-align: center;
+}
+
+#county, #stat {
+  margin-bottom: 3px;
+  font-size: 21px;
+  text-align: center;
+}
+
+#stat {
+  margin-top: 0px;
+}
+
+#footer {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+.options-group .list-group-item {
+  background-color: #000000;
+  color: white;
+  border-color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.options-group .list-group-item:hover {
+  background-color: white;
+  color: black;
+}
+
+.options-group .list-group-item:active {
+  background-color: white;
+}
+
+
+.dropdown {
+  text-align: left;
+}
+
+.dropdown-content {
+  align-items: center;
+  background-color: black;
+  min-width: 160px;
+  max-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+  border-radius: 13px;
+  border: 2px solid white;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+  background-color: black;
+  max-height: 43px;
+}
+
+.dropdown-content a.selected {
+  font-weight: 700;
+}
+
+.explanation {
+  text-align: left;
+  color: white;
+}
+
+.explanation-header {
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.explanation-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+/* RESPONSIVE: */
