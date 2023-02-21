@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Space and the Environment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-53eecfb9.js"></script>
+  <link rel="stylesheet" href="/assets/index-af877e74.css">
+</head>
+<body>
+  
+  
+  <canvas class="webgl"></canvas>
+  <div class="container">
+
+    <div class="row titleRow justify-content-center align-items-end">
+      <div class="col-12">
+        <h1 id="title">Black Space and the Environment</h1>
+      </div>
+    </div>
+
+    <div class="row subtitleRow justify-content-center">
+      <div class="col-12">
+        <h2 id="subtitle">This visualization imagines the state of Pennsylvania as a bar graph, segmented by county.<br>Explore the correlation between disease incidence and each county's Black population.<br></h2>
+      </div>
+    </div>
+
+      <div class="row canvasRow pe-none justify-content-center" id="canvasRow">
+      </div>
+
+    <div class="row countyRow justify-content-center">
+      <div class="col-12">
+        <h3 id="county">11.09% of Pennsylvania's population is Black or African-American.</h3>
+      </div>
+    </div>
+
+    <div class="row statRow justify-content-center">
+      <div class="col-12">
+        <h3 id="stat">10.46% of Pennsylvania's population suffers from asthma.</h3>
+      </div>
+    </div>
+
+    <div class="row statSpacer justify-content-center">
+    </div>
+
+    <div class="row GUIRow justify-content-center align-items-center">
+      <div class="col-2">
+        <div class="list-group options-group">
+          <button class="list-group-item list-group-item-action active">Asthma</button>
+          <button class="list-group-item list-group-item-action">COPD</button>
+          <button class="list-group-item list-group-item-action">Lung Cancer</button>
+          <button class="list-group-item list-group-item-action">Cardiovascular</button>
+          <button class="list-group-item list-group-item-action">Poverty</button>
+      </div>
+      </div>
+      <div class="col-6">
+        <h3 id="header" class="explanation-header">Asthma:</h3>
+        <p id="paragraph" class="explanation-text">Please select a disease from the dropdown menu to see its explanation here.</p>
+      </div>
+    </div>
+    <div class="row bottom-spacer"></div>
+    <div class="row footer justify-content-center">
+      <div class="col-12">
+        <p id="footer">Disease incidence data comes from the American Lung Association. Population data comes from the U.S. Census Bureau.</p>
+      </div>
+    </div>
+    
+  </div>
+  <!--
+  <div id="titleContainer">
+
+    <div>
+      <h1 id="title">Black Space and the Environment</h1>
+      <h2 id="subtitle">This visualization imagines the state of Pennsylvania as a bar graph, segmented by county.<br>Explore the correlation between disease incidence and each county's Black population.<br></h2>
+    </div>
+
+  </div>
+
+  <div id="statsContainer">
+
+    <h3 id="county">11.09% of Pennsylvania's population is Black or African-American.</h3>
+    <div><h3 id="stat">10.46% of Pennsylvania's population suffers from asthma.</h3></div>
+
+  </div>
+
+  <div class="GUI">
+
+    <div class="dropdown">
+      <div class="dropdown-content">
+        <a href="#" data-value="Asthma">Asthma</a>
+        <a href="#" data-value="COPD">COPD</a>
+        <a href="#" data-value="Lung Cancer">Lung Cancer</a>
+        <a href="#" data-value="Cardiovascular">Cardiovascular</a>
+        <a href="#" data-value="Poverty">Poverty</a>
+      </div>
+    </div>
+
+    <div class="explanation">
+      <h3 id="header" class="explanation-header">Asthma:</h3>
+      <p id="paragraph" class="explanation-text">Please select a disease from the dropdown menu to see its explanation here.</p>
+    </div>
+
+  </div>
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--
+
+  DONE Add a disease summary next to each factor.
+  WORKING ON THIS  Or, add links to external data (easier?)
+  DONE Add a timeline that starts with a bird's eye view, and then
+        pans to a diagonal view that shows the heights
+
+  DONE Add zoom/rotation limits
+
+  DONE Fix the lighting ?
+
+  Add sources and credit 3d model(s)!!!
+
+  Add a blurb about data normalization
+
+  DONE Put a line below the population stat that highlights disease incidence stats (un-normalized).
+
+  DONE Move the stat lines below the map! Shrink the menu and description and move the stat line below map. Move map up
+  Move title up.
+
+  SEND DOC THE MODEL'S RECEIPT.
+-->
