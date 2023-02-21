@@ -302,7 +302,7 @@ function getColor(percentage) {
 //Scene
 const scene = new THREE.Scene()
 const loader = new GLTFLoader()
-loader.setPath('/assets/')
+//loader.setPath('/assets/')
 
 //const axesHelper = new THREE.AxesHelper( 10 );
 //scene.add( axesHelper );
