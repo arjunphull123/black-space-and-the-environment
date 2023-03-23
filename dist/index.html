@@ -10,14 +10,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/black-space/assets/index-ad9e20f7.js"></script>
-  <link rel="stylesheet" href="/black-space/assets/index-96743a69.css">
+  <script type="module" crossorigin src="/black-space/assets/index-8a633030.js"></script>
+  <link rel="stylesheet" href="/black-space/assets/index-4c50e362.css">
 </head>
 <body>
   
   
   <canvas class="webgl"></canvas>
-  <div class="container">
+  <div class="container" width="100vw" height="100vh">
 
     <div class="row titleRow justify-content-center align-items-end">
       <div class="col-12">
@@ -27,7 +27,7 @@
 
     <div class="row subtitleRow justify-content-center">
       <div class="col-12">
-        <h2 id="subtitle">This visualization imagines the state of Pennsylvania as a bar graph, segmented by county.<br>Explore the correlation between disease incidence and each county's Black population.<br></h2>
+        <h2 id="subtitle">This visualization imagines the state of Pennsylvania as a bar graph, segmented by county.<br>Hover over a county to explore the correlation between disease incidence and its Black population.<br>Click, drag, and scroll on the map to move it around.</h2>
       </div>
     </div>
 
@@ -52,19 +52,20 @@
     <div class="row GUIRow justify-content-center align-items-center">
       <div class="col-2">
         <div class="list-group options-group">
-          <button class="list-group-item list-group-item-action active">Asthma</button>
-          <button class="list-group-item list-group-item-action">COPD</button>
-          <button class="list-group-item list-group-item-action">Lung Cancer</button>
-          <button class="list-group-item list-group-item-action">Cardiovascular</button>
-          <button class="list-group-item list-group-item-action">Poverty</button>
-      </div>
+          <button class="list-group-item list-group-item-action" id="asthmaButton">Asthma</button>
+          <button class="list-group-item list-group-item-action" id="copdButton">COPD</button>
+          <button class="list-group-item list-group-item-action" id="lungCancerButton">Lung Cancer</button>
+          <button class="list-group-item list-group-item-action" id="cvButton">Cardiovascular</button>
+          <button class="list-group-item list-group-item-action" id="povertyButton">Poverty</button>
+        </div>
       </div>
       <div class="col-6">
         <h3 id="header" class="explanation-header">Asthma:</h3>
         <p id="paragraph" class="explanation-text">Please select a disease from the dropdown menu to see its explanation here.</p>
-        <p id="footer">Disease incidence data comes from the American Lung Association. Population data comes from the U.S. Census Bureau.</p>
+        <p id="footer">The height of each county represents relative disease incidence, and the color of each county represents its relative Black population. Incidence data comes from the American Lung Association. Population data comes from the U.S. Census Bureau.</p>
       </div>
     </div>
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
