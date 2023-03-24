@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/black-space/assets/index-8a633030.js"></script>
-  <link rel="stylesheet" href="/black-space/assets/index-4c50e362.css">
+  <script type="module" crossorigin src="/black-space/assets/index-7559076d.js"></script>
+  <link rel="stylesheet" href="/black-space/assets/index-75f7effb.css">
 </head>
 <body>
   
@@ -26,9 +26,14 @@
     </div>
 
     <div class="row subtitleRow justify-content-center">
-      <div class="col-12">
-        <h2 id="subtitle">This visualization imagines the state of Pennsylvania as a bar graph, segmented by county.<br>Hover over a county to explore the correlation between disease incidence and its Black population.<br>Click, drag, and scroll on the map to move it around.</h2>
+      <div class="col-2"></div>
+      <div class="col-8">
+        <h2 id="subtitle">This visualization imagines the state of Pennsylvania as a bar graph. The height of each county represents the relative incidence of environmentally provoked conditions, and the color of each county represents its relative Black population.
+        </h2>
+        <h2 id="subtitle-2">Select a condition from the menu below. Hover over a county to explore the prevalence of that condition across Pennsylvania.
+          <br>Click, drag, and scroll on the map to move the camera around. Use the right mouse button to pan the camera.</h2>
       </div>
+      <div class="col-2"></div>
     </div>
 
       <div class="row canvasRow pe-none justify-content-center" id="canvasRow">
@@ -62,7 +67,10 @@
       <div class="col-6">
         <h3 id="header" class="explanation-header">Asthma:</h3>
         <p id="paragraph" class="explanation-text">Please select a disease from the dropdown menu to see its explanation here.</p>
-        <p id="footer">The height of each county represents relative disease incidence, and the color of each county represents its relative Black population. Incidence data comes from the American Lung Association. Population data comes from the U.S. Census Bureau.</p>
+        <p id="footer">The data is normalized on a scale from 0 to 10 to better highlight the range of disease rates across Pennsylvania. 
+          Incidence data comes from the American Lung Association's 
+          <a href="https://www.lung.org/research/sota/key-findings" target="_blank" rel="noopener noreferrer">State of the Air 2022</a> report. 
+          Population data comes from the <a href="https://www.indexmundi.com/facts/united-states/quick-facts/pennsylvania/black-population-percentage#map" target="_blank" rel="noopener noreferrer">U.S. Census Bureau.</a></p>
       </div>
     </div>
 
