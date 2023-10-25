@@ -307,7 +307,7 @@ loader.setPath('/assets/')
 //const axesHelper = new THREE.AxesHelper( 10 );
 //scene.add( axesHelper );
 
-let scaleFactor = 8
+let scaleFactor = 10.5
 
 // load in counties:
 // load adams county
@@ -1651,71 +1651,62 @@ loader.load('york.gltf', function(gltf) {
 
 //Factor explanations:
 let expl = {
-  'Asthma': 'Asthma is a chronic respiratory condition that impacts the lungs\' airways, which are responsible for transporting air in and out of the lungs. Those who suffer from asthma can experience inflamed and narrow airways, which can make exhaling difficult. In the United States, around 25 million individuals have asthma, which equates to roughly 1 in 13 people. Out of the 25 million, approximately 20 million are adults aged 18 and above. Asthma rates are particularly high among Black adults in the United States.',
+  'ASTHMA': 'Asthma is a chronic respiratory condition that impacts the lungs\' airways, which are responsible for transporting air in and out of the lungs. Those who suffer from asthma can experience inflamed and narrow airways, which can make exhaling difficult. In the United States, around 25 million individuals have asthma, which equates to roughly 1 in 13 people. Out of the 25 million, approximately 20 million are adults aged 18 and above. Asthma rates are particularly high among Black adults in the United States.',
   'COPD': 'Chronic obstructive pulmonary disease, commonly known as COPD, is an umbrella term for a collection of illnesses that impede airflow and breathing. This category includes diseases such as emphysema and chronic bronchitis. COPD is an ailment that progresses over time, reducing the volume of air that travels through the airways, thus making it challenging to breathe. COPD is a principal cause of disability and the fourth most common cause of death in the US, as reported by the CDC.',
-  'Lung Cancer': 'Lung cancer is a type of cancer that originates in the tissues of the lung, typically in the cells lining the airways. There are two main variations: small cell and non-small cell lung cancer, which differ in growth and treatment methods. Non-small cell lung cancer is the more prevalent form. Lung cancer is the foremost cause of cancer-related deaths in the US, accounting for approximately one out of every five cancer deaths. Each year, more people die of lung cancer than of colon, breast, and prostate cancers combined.',
-  'Cardiovascular': 'Cardiovascular disease refers to a group of diseases that impact the health of the heart and blood vessels. It is a leading cause of death globally and in the U.S., with nearly 50% of American adults experiencing some form of the disease. This disease does not discriminate based on age, gender, ethnicity, or socioeconomic status. However, women and individuals assigned female at birth are at a higher risk, with one in every three individuals in this group dying from cardiovascular disease.',
-  'Poverty': 'The federal poverty level (FPL), also known as the "poverty line," serves as a crucial economic measure to determine if an individual or family qualifies for specific federal benefits and programs. Once a year, the Department of Health and Human Services (HHS) updates the poverty guidelines, which represent the minimum amount of income necessary for a family to afford basic needs such as food, clothing, shelter, and transportation. These guidelines are adjusted for inflation to ensure their accuracy.'
+  'LUNG CANCER': 'Lung cancer is a type of cancer that originates in the tissues of the lung, typically in the cells lining the airways. There are two main variations: small cell and non-small cell lung cancer, which differ in growth and treatment methods. Non-small cell lung cancer is the more prevalent form. Lung cancer is the foremost cause of cancer-related deaths in the US, accounting for approximately one out of every five cancer deaths. Each year, more people die of lung cancer than of colon, breast, and prostate cancers combined.',
+  'CARDIOVASCULAR': 'Cardiovascular disease refers to a group of diseases that impact the health of the heart and blood vessels. It is a leading cause of death globally and in the U.S., with nearly 50% of American adults experiencing some form of the disease. This disease does not discriminate based on age, gender, ethnicity, or socioeconomic status. However, women and individuals assigned female at birth are at a higher risk, with one in every three individuals in this group dying from cardiovascular disease.',
+  'POVERTY': 'The federal poverty level (FPL), also known as the "poverty line," serves as a crucial economic measure to determine if an individual or family qualifies for specific federal benefits and programs. Once a year, the Department of Health and Human Services (HHS) updates the poverty guidelines, which represent the minimum amount of income necessary for a family to afford basic needs such as food, clothing, shelter, and transportation. These guidelines are adjusted for inflation to ensure their accuracy.'
 }
 
 //Choose factor:
-let factors = {'Asthma': 0, 'COPD': 1, 'Lung Cancer': 2, 'Cardiovascular': 3, 'Poverty': 4}
-const options = document.querySelectorAll(".list-group-item");
-let selectedFactor = "Asthma";
+let factors = {'ASTHMA': 0, 'COPD': 1, 'LUNG CANCER': 2, 'CARDIOVASCULAR': 3, 'POVERTY': 4}
+const options = document.querySelectorAll(".button");
+let selectedFactor = "ASTHMA";
 factor = factors[selectedFactor]
 
 const asthma = options[0]
 asthma.classList.add("active");
 
-const header = document.querySelector("#header");
-const paragraph = document.querySelector("#paragraph");
-const statLine = document.querySelector("#stat");
+const header = document.querySelector("#info-title");
+const paragraph = document.querySelector("#info-text");
+const statLine = document.querySelector("#statline");
 
 const pennStats = {
-  'Asthma': '10.46% of Pennsylvania\'s population suffers from asthma.',
+  'ASTHMA': '10.46% of Pennsylvania\'s population suffers from asthma.',
   'COPD': "5.78% of Pennsylvania's population suffers from COPD.",
-  'Lung Cancer': "0.06% of Pennsylvania's population suffers from lung cancer.",
-  'Cardiovascular': "8.16% of Pennsylvania's population suffers from cardiovascular disease.",
-  'Poverty': "10.53% of Pennsylvania's population lives in poverty."
+  'LUNG CANCER': "0.06% of Pennsylvania's population suffers from lung cancer.",
+  'CARDIOVASCULAR': "8.16% of Pennsylvania's population suffers from cardiovascular disease.",
+  'POVERTY': "10.53% of Pennsylvania's population lives in poverty."
 }
 
 const afflictionPhrase = {
-  'Asthma': 'suffers from asthma.',
+  'ASTHMA': 'suffers from asthma.',
   'COPD': "suffers from COPD.",
-  'Lung Cancer': "suffers from lung cancer.",
-  'Cardiovascular': "suffers from cardiovascular disease.",
-  'Poverty': "lives in poverty."
+  'LUNG CANCER': "suffers from lung cancer.",
+  'CARDIOVASCULAR': "suffers from cardiovascular disease.",
+  'POVERTY': "lives in poverty."
 }
 
-header.textContent = selectedFactor;
+header.textContent = selectedFactor + '.'
 paragraph.textContent = expl[selectedFactor]
 
-document.getElementById('asthmaButton').style['background-color'] = 'white'
-document.getElementById('asthmaButton').style['color'] = 'black'
-
 options.forEach((option) => {
-  option.addEventListener("click", function () {
-    console.log(this + 'clicked')
-    console.log(this.classList)
+  option.addEventListener("click", function() {
     options.forEach((option) => {
-      //option.classList.remove('list-group-item:active')
-      option.style['background-color'] = '#000000'
-      option.style['color'] = 'white'
-    });
-    this.style['background-color'] = 'white'
-    this.style['color'] = 'black'
-    //this.classList.add('list-group-item:active')
+      option.classList.remove('active')
+    })
+    this.classList.add('active')
 
-    selectedFactor = this.textContent;
-    factor = factors[selectedFactor];
-
-    header.textContent = selectedFactor;
+    selectedFactor = this.textContent
+    console.log(selectedFactor)
+    factor = factors[selectedFactor]
+    header.textContent = selectedFactor + '.'
     paragraph.textContent = expl[selectedFactor]
     statLine.textContent = pennStats[selectedFactor]
 
-    counties.forEach((county) => scaleCounty(county));
-  });
-});
+    counties.forEach((county) => scaleCounty(county))
+  })
+})
 
 //Scale functionality
 const counties = [adams, allegheny, armstrong, beaver, bedford, berks, blair, bradford, bucks, butler, cambria, cameron, carbon, centre, chester, clarion, clearfield, clinton, columbia, crawford, cumberland, dauphin, delaware, elk, erie, fayette, forest, franklin, fulton, greene, huntingdon, indiana, jefferson, juniata, lackawanna, lancaster, lawrence, lebanon, lehigh, luzerne, lycoming, mckean, mercer, mifflin, monroe, montgomery, montour, northampton, northumberland, perry, philadelphia, pike, potter, schuylkill, snyder, somerset, sullivan, susquehanna, tioga, union, venango, warren, washington, wayne, westmoreland, wyoming, york]
@@ -1750,8 +1741,9 @@ document.addEventListener('mousemove', onMouseMove, false);
 // Function that gets called on mousemove
 function onMouseMove(event) {
   // Calculate the mouse position in normalized device coordinates
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  const rect = canvas.getBoundingClientRect();
+  mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+  mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
 
   // Cast a ray from the mouse position into the scene
   raycaster.setFromCamera(mouse, camera);
@@ -1807,13 +1799,17 @@ function onMouseMove(event) {
   }
 }
 
+//Canvas
+const canvas = document.querySelector('#contentWindow')
+
 //Sizes
 const sizes = {
-  width: window.innerWidth,
-  height: window.innerHeight,
+  width: canvas.clientWidth,
+  height: canvas.clientHeight,
 }
 
 //Light
+/*
 const ptLight = new THREE.PointLight(0xffffff, 0.75, 150)
 ptLight.position.set(50, 50, 50)
 ptLight.castShadow = true
@@ -1843,8 +1839,14 @@ const backLight = new THREE.PointLight(0xffffff, 0.25, 75)
 backLight.position.set(0, -50, -50)
 backLight.castShadow = true
 scene.add(backLight)
+*/
 
-const ambLight = new THREE.AmbientLight(0xffffff, 0.5)
+const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.25)
+dirLight1.position.set(0, 50*scaleFactor, 50*scaleFactor)
+dirLight1.castShadow = true
+scene.add(dirLight1)
+
+const ambLight = new THREE.AmbientLight(0xffffff, 0.7)
 scene.add(ambLight)
 
 //Camera
@@ -1854,7 +1856,6 @@ camera.position.y = 30 * scaleFactor
 scene.add(camera)
 
 //Renderer
-const canvas = document.querySelector('.webgl')
 const renderer = new THREE.WebGLRenderer({canvas}, {alpha: true})
 renderer.setClearColor ( 0x000000, 0)
 renderer.setSize(sizes.width, sizes.height)
@@ -1876,8 +1877,8 @@ var minPan = new THREE.Vector3(-20, -20, -20);
 var maxPan = new THREE.Vector3(20, 20, 20);
 var _v = new THREE.Vector3();
 
-controls.minDistance = 150;
-controls.maxDistance = 300;
+controls.minDistance = 75;
+controls.maxDistance = 150;
     
 controls.addEventListener("change", function() {
     _v.copy(controls.target);
@@ -1889,8 +1890,8 @@ controls.addEventListener("change", function() {
 
 //Resize
 window.addEventListener('resize', () => {
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
+    sizes.width = canvas.clientWidth
+    sizes.height = canvas.clientHeight
     
     camera.aspect = sizes.width / sizes.height
     camera.updateProjectionMatrix()
@@ -1899,9 +1900,9 @@ window.addEventListener('resize', () => {
 
 //Timeline
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-tl.to(".webgl", {duration: 1.5, top: "0%", delay: 1}, 0)
-tl.to(camera.position, {duration: 1.5, x: 0, y: 17*scaleFactor, z: 25*scaleFactor, delay: 1}, 0)
-
+tl.to("#contentWindow", {duration: 1.5, top: "0%", delay: 10}, 0)
+tl.to(camera.position, {duration: 1.5, x: 0, y: 15*scaleFactor, z: 25*scaleFactor, delay: 1}, 0)
+scene.translateY(-2.5*scaleFactor)
 
 //Loop
 const loop = () => {
