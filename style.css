@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'VTC Du Bois Trial';
-  src: url('/VTCDuBoisTrial-Regular.woff2') format('woff2'),
-       url('/VTCDuBoisTrial-Regular.woff') format('woff');
+  font-family: 'VTC Du Bois';
+  src: url('/fonts/VTCDuBois-Regular.woff2') format('woff2'),
+       url('/fonts/VTCDuBois-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'VTC Du Bois Trial';
-  src: url('/VTCDuBoisTrial-Bold.woff2') format('woff2'),
-       url('/VTCDuBoisTrial-Bold.woff') format('woff');
+  font-family: 'VTC Du Bois';
+  src: url('/fonts/VTCDuBois-Bold.woff2') format('woff2'),
+       url('/fonts/VTCDuBois-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -57,7 +57,7 @@ h1.title {
   align-self: stretch;
   color: #654321;
   text-align: center;
-  font-family: VTC Du Bois Trial;
+  font-family: VTC Du Bois;
   font-size: 3.75rem;
   font-style: normal;
   font-weight: 700;
@@ -130,7 +130,7 @@ p.subtitle {
   border: 3px solid #654321;
   flex: 1 0 0;
   color: #654321;
-  font-family: VTC Du Bois Trial;
+  font-family: VTC Du Bois;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -163,7 +163,7 @@ p.subtitle {
 h3.info-title {
   align-self: stretch;
   color: #654321;
-  font-family: VTC Du Bois Trial;
+  font-family: VTC Du Bois;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
