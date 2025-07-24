@@ -20,23 +20,23 @@
     <div class="titles">
       <h1 class="title">BLACK SPACE AND THE ENVIRONMENT.</h1>
       <p class="subtitle">
-        This visualization imagines the state of Pennsylvania as a bar graph. The height of each county represents the relative incidence of environmentally provoked conditions, and the color of each county represents its relative Black population. Hover over a county to explore the prevalence of the selected condition across Pennsylvania. Click and drag to move the map.
+        This visualization imagines the state of Pennsylvania as a bar graph. The height of each county represents the relative age-adjusted prevalence of environmentally provoked conditions, and the color of each county represents its relative Black population. Hover over a county to explore the prevalence of the selected condition across Pennsylvania. Click and drag to move the map.
       </p>
     </div>
     <canvas id="contentWindow"  class="webgl canvas-placeholder"></canvas>
     <div class="stats">
       <p class="statline">
       <span id="county">
-        11.09% of Pennsylvania's population is Black or African-American.
-      </span><br><span id="statline">10.46% of Pennsylvania's population suffers from asthma.
+        12.73% of Pennsylvania's population is Black or African-American.
+      </span><br><span id="statline">8.52% of Pennsylvania's population suffers from asthma.
       </span></p>
     </div>
     <div class="menu-info">
       <div class="menu">
         <div id="asthmaButton" class="button active">ASTHMA</div>
         <div id="copdButton" class="button">COPD</div>
-        <div id="lungCancerButton" class="button">LUNG CANCER</div>
-        <div id="cvButton" class="button">CARDIOVASCULAR</div>
+        <div id="lungCancerButton" class="button">CANCER</div>
+        <div id="cvButton" class="button">CORONARY</div>
         <div id="povertyButton" class="button">POVERTY</div>
       </div>
       <div class="info">
@@ -47,7 +47,7 @@
           </p>
         </div>
         <p class="footer">
-          The data is normalized on a scale from 0 to 10 to better highlight the range of disease rates across Pennsylvania. Incidence data comes from the American Lung Association's State of the Air 2022 report. Population data comes from the U.S. Census Bureau.
+          The heights of each county are min-max normalized on a scale from 2 to 10 to better highlight the range of condition rates across Pennsylvania.<br>Prevalence, population, and demographic data come from the Center for Disease Control and Prevention (CDC)'s PLACES dataset and the U.S. Census Bureau.
         </p>
       </div>
     </div>
